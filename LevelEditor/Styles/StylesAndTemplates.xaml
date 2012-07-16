@@ -1,0 +1,574 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:local="clr-namespace:LevelEditor">
+
+    <sys:Double
+		x:Key="TextElement_Default_FontSize">12</sys:Double>
+
+    <FontFamily
+		x:Key="TextElement_Default_FontFamily">Arial</FontFamily>
+
+    <!-- BASE STYLE -->
+
+    <Style
+		x:Key="BaseStyle">
+        <Setter
+			Property="TextElement.FontFamily"
+			Value="{StaticResource TextElement_Default_FontFamily}" />
+        <Setter
+			Property="TextElement.FontSize"
+			Value="{StaticResource TextElement_Default_FontSize}" />
+        <Setter
+			Property="TextElement.FontWeight"
+			Value="Normal" />
+    </Style>
+
+    <!-- / BASE STYLE -->
+
+    <!-- PATH -->
+
+    <Style
+		x:Key="Path_BaseStyle"
+		TargetType="{x:Type Path}"
+		BasedOn="{StaticResource BaseStyle}" />
+
+    <Style
+		x:Key="{x:Type Path}"
+		TargetType="{x:Type Path}"
+		BasedOn="{StaticResource Path_BaseStyle}">
+        <Setter
+			Property="HorizontalAlignment"
+			Value="Center" />
+        <Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+    </Style>
+
+    <!-- / PATH -->
+
+    <!-- BORDER -->
+
+    <Style
+		x:Key="Border_BaseStyle"
+		TargetType="{x:Type Border}"
+		BasedOn="{StaticResource BaseStyle}" />
+
+    <Style
+		x:Key="{x:Type Border}"
+		TargetType="{x:Type Border}"
+		BasedOn="{StaticResource Border_BaseStyle}" />
+
+    <!-- / BORDER -->
+
+    <!-- TEXTBLOCK -->
+
+    <Style
+		x:Key="TextBlock_BaseStyle"
+		TargetType="{x:Type TextBlock}"
+		BasedOn="{StaticResource BaseStyle}">
+        <Setter
+			Property="Margin"
+			Value="5,2" />
+        <Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+        <Style.Triggers>
+            <Trigger
+				Property="IsEnabled"
+				Value="False">
+                <Setter
+					Property="Opacity"
+					Value="0.5" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- / TEXTBLOCK -->
+
+    <!-- BUTTON -->
+
+    <Style
+		x:Key="Button_BaseStyle"
+		TargetType="{x:Type Button}"
+		BasedOn="{StaticResource BaseStyle}">
+        <Setter
+			Property="Margin"
+			Value="5,2" />
+        <Setter
+			Property="Padding"
+			Value="5,2" />
+        <Style.Triggers>
+            <Trigger
+				Property="IsEnabled"
+				Value="False">
+                <Setter
+					Property="Opacity"
+					Value="0.75" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- / BUTTON -->
+
+    <!-- WINDOW -->
+
+    <Style
+		x:Key="Window_Base_Style"
+		TargetType="{x:Type local:WindowBase}">
+        <Style.Resources>
+
+            <Style
+				x:Key="TextBlock_Window_Style"
+				TargetType="{x:Type TextBlock}"
+				BasedOn="{StaticResource TextBlock_BaseStyle}">
+                <Setter
+					Property="FontSize"
+					Value="12" />
+                <Setter
+					Property="Margin"
+					Value="10,0" />
+            </Style>
+
+            <Style
+				x:Key="Path_Window_Style"
+				TargetType="{x:Type Path}"
+				BasedOn="{StaticResource Path_BaseStyle}">
+                <Setter
+					Property="Fill"
+					Value="{StaticResource Window_Path_Normal_Brush}" />
+                <Style.Triggers>
+                    <DataTrigger
+						Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Mode=OneWay}"
+						Value="True">
+                        <Setter
+							Property="Fill"
+							Value="{StaticResource Window_Path_MouseOver_Brush}" />
+                    </DataTrigger>
+                    <DataTrigger
+						Binding="{Binding IsPressed, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Mode=OneWay}"
+						Value="True">
+                        <Setter
+							Property="Fill"
+							Value="{StaticResource Window_Path_Pressed_Brush}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style
+				x:Key="Button_Window_Style"
+				TargetType="{x:Type Button}"
+				BasedOn="{StaticResource Button_BaseStyle}">
+                <Setter
+					Property="HorizontalContentAlignment"
+					Value="Center" />
+                <Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+                <Setter
+					Property="Cursor"
+					Value="Hand" />
+                <Setter
+					Property="Background"
+					Value="{StaticResource Window_Button_Background_Normal_Brush}" />
+                <Setter
+					Property="BorderBrush"
+					Value="{StaticResource Window_Button_Border_Normal_Brush}" />
+                <Setter
+					Property="BorderThickness"
+					Value="1" />
+                <Setter
+					Property="Border.CornerRadius"
+					Value="1" />
+                <Setter
+					Property="Padding"
+					Value="1" />
+                <Setter
+					Property="Width"
+					Value="20" />
+                <Setter
+					Property="Height"
+					Value="20" />
+                <Setter
+					Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+							TargetType="{x:Type Button}">
+                            <Border
+								x:Name="PART_Border"
+								Background="{TemplateBinding Background}"
+								BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="{TemplateBinding BorderThickness}"
+								Padding="{TemplateBinding Padding}"
+								CornerRadius="{TemplateBinding Border.CornerRadius}">
+                                <ContentPresenter
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger
+						Property="IsMouseOver"
+						Value="True">
+                        <Setter
+							Property="BorderBrush"
+							Value="{StaticResource Window_Button_Border_MouseOver_Brush}" />
+                        <Setter
+							Property="Background"
+							Value="{StaticResource Window_Button_Background_MouseOver_Brush}" />
+                    </Trigger>
+                    <Trigger
+						Property="IsPressed"
+						Value="True">
+                        <Setter
+							Property="BorderBrush"
+							Value="{StaticResource Window_Button_Border_Pressed_Brush}" />
+                        <Setter
+							Property="Background"
+							Value="{StaticResource Window_Button_Background_Pressed_Brush}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style
+				x:Key="Button_Close_Style"
+				TargetType="{x:Type Button}"
+				BasedOn="{StaticResource Button_Window_Style}">
+                <Setter
+					Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Path
+								x:Name="PART_Path"
+								Style="{StaticResource Path_Window_Style}"
+								Data="F1 M 7.07111,3.05176e-005L 8.48529,1.41428L 5.65686,4.24271L 8.48529,7.07108L 7.07111,8.48532L 4.24268,5.65683L 1.41425,8.48532L 0,7.07108L 2.82843,4.24265L 6.10352e-005,1.41428L 1.41418,3.05176e-005L 4.24261,2.82846L 7.07111,3.05176e-005 Z " />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter
+					Property="Margin"
+					Value="0" />
+            </Style>
+
+            <Style
+				x:Key="Button_Maximize_Style"
+				TargetType="{x:Type Button}"
+				BasedOn="{StaticResource Button_Window_Style}">
+                <Setter
+					Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Path
+								x:Name="PART_Path"
+								Style="{StaticResource Path_Window_Style}"
+								Data="F1 M 9.00024,7.99976L 9.00024,1.99976L 1.00024,1.99976L 1,2.99994L 1.00012,7.99994L 7.00012,7.99994L 8.00012,7.99994L 9.00024,7.99976 Z M 11.0001,8.99994L 10.0001,8.99994L 8.00012,8.99994L 7.00012,8.99994L 0.00012207,8.99994L 0.00012207,7.99994L 0.00012207,4.00006L 0,0L 10.0001,0L 10.0001,8.99982L 11.0001,8.99982L 11.0001,8.99994 Z " />
+                            <DataTemplate.Triggers>
+                                <DataTrigger
+									Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+									Value="Maximized">
+                                    <Setter
+										TargetName="PART_Path"
+										Property="Data"
+										Value="F1 M 0,3L 2,3L 2,0L 11,0L 11,7L 9,7L 9,10L 0,10L 0,3 Z M 8.99988,3L 8.99988,6.00006L 9.99976,6.00006L 9.99976,2.00006L 2.99976,2.00006L 2.99976,3L 8.99988,3 Z M 0.999878,5L 0.999878,9L 7.99988,9L 7.99988,5L 0.999878,5 Z " />
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter
+					Property="Margin"
+					Value="0" />
+            </Style>
+
+            <Style
+				x:Key="Button_Minimize_Style"
+				TargetType="{x:Type Button}"
+				BasedOn="{StaticResource Button_Window_Style}">
+                <Setter
+					Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Path
+								x:Name="PART_Path"
+								Style="{StaticResource Path_Window_Style}"
+								Data="F1 M 0,8L 9,8L 9,10L 0,10L 0,8 Z " />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter
+					Property="Margin"
+					Value="0" />
+            </Style>
+            
+            <Style x:Key="Window_Icon"
+                   TargetType="{x:Type Image}">
+                <Setter Property="Margin" Value="5,2"/>
+                <Setter Property="Stretch" Value="UniformToFill"/>
+                <Setter Property="Height" Value="16"/>
+                
+            </Style>
+            
+            <Style
+				x:Key="Border_External_Style"
+				TargetType="{x:Type Border}"
+				BasedOn="{StaticResource Border_BaseStyle}">
+                <Setter
+					Property="Visibility"
+					Value="Collapsed" />
+                <Setter
+					Property="Background"
+					Value="{StaticResource Window_External_Border_Brush}" />
+                <Style.Triggers>
+                    <DataTrigger
+						Binding="{Binding ResizeMode, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Mode=OneWay}"
+						Value="CanResize">
+                        <Setter
+							Property="Visibility"
+							Value="Visible" />
+                    </DataTrigger>
+                    <DataTrigger
+						Binding="{Binding ResizeMode, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Mode=OneWay}"
+						Value="CanResizeWithGrip">
+                        <Setter
+							Property="Visibility"
+							Value="Visible" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+        </Style.Resources>
+        <Setter
+			Property="AllowsTransparency"
+			Value="False" />
+        <Setter
+			Property="WindowStyle"
+			Value="None" />
+        <Setter
+			Property="Background"
+			Value="{StaticResource Window_Background_Brush}" />
+        <Setter
+			Property="BorderBrush"
+			Value="{StaticResource Window_Border_Brush}" />
+        <Setter
+			Property="Foreground"
+			Value="{StaticResource Window_Foreground_Brush}" />
+        <Setter
+			Property="BorderThickness"
+			Value="1" />
+        <Setter
+			Property="HasMaximize"
+			Value="True" />
+        <Setter
+			Property="HasMinimize"
+			Value="True" />
+        <Setter
+			Property="Padding"
+			Value="0" />
+        <Setter
+			Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+					TargetType="{x:Type Window}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+								Height="1" />
+                            <RowDefinition
+								Height="9" />
+                            <RowDefinition
+								Height="*" />
+                            <RowDefinition
+								Height="9" />
+                            <RowDefinition
+								Height="1" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+								Width="1" />
+                            <ColumnDefinition
+								Width="9" />
+                            <ColumnDefinition
+								Width="*" />
+                            <ColumnDefinition
+								Width="9" />
+                            <ColumnDefinition
+								Width="1" />
+                        </Grid.ColumnDefinitions>
+
+                        <Border
+							Grid.Column="0"
+							Grid.ColumnSpan="5"
+							Grid.Row="0"
+							Grid.RowSpan="5"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+										Height="20" />
+                                    <RowDefinition
+										Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Border
+									Grid.Row="0"
+									BorderThickness="0,0,0,1"
+									BorderBrush="{TemplateBinding BorderBrush}"
+									Background="{StaticResource Window_Header_Background_Brush}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition
+												Width="*" />
+                                            <ColumnDefinition
+												Width="Auto" />
+                                            <ColumnDefinition
+												Width="Auto" />
+                                            <ColumnDefinition
+												Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Border
+											x:Name="PART_TitleBar"
+											Grid.Column="0">
+                                            <TextBlock
+												Text="{TemplateBinding Title}"
+												Style="{StaticResource TextBlock_Window_Style}" />
+                                        </Border>
+                                        <Button
+											x:Name="PART_MinimizeButton"
+											Grid.Column="1"
+											Style="{StaticResource Button_Minimize_Style}" />
+                                        <Button
+											x:Name="PART_MaximizeButton"
+											Grid.Column="2"
+											Style="{StaticResource Button_Maximize_Style}" />
+                                        <Button
+											x:Name="PART_CloseButton"
+											Grid.Column="3"
+											Style="{StaticResource Button_Close_Style}" />
+                                    </Grid>
+                                </Border>
+
+                                <Border
+									Grid.Row="1"
+									Background="{StaticResource Window_Body_Background_Brush}">
+                                    <AdornerDecorator>
+                                        <ContentPresenter
+											Margin="{TemplateBinding Padding}" />
+                                    </AdornerDecorator>
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border
+							x:Name="BORDER_Left"
+							Grid.Column="0"
+							Grid.Row="2"
+							Cursor="SizeWE"
+							Style="{StaticResource Border_External_Style}" />
+                        <Border
+							x:Name="BORDER_Top"
+							Grid.Column="2"
+							Grid.Row="0"
+							Cursor="SizeNS"
+							Style="{StaticResource Border_External_Style}" />
+
+                        <Border
+							x:Name="BORDER_TopLeft"
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							Grid.Row="0"
+							Cursor="SizeNWSE"
+							Style="{StaticResource Border_External_Style}" />
+                        <Border
+							x:Name="BORDER_LeftTop"
+							Grid.Column="0"
+							Grid.Row="1"
+							Cursor="SizeNWSE"
+							Style="{StaticResource Border_External_Style}" />
+
+                        <Border
+							x:Name="BORDER_TopRight"
+							Grid.Column="3"
+							Grid.ColumnSpan="2"
+							Grid.Row="0"
+							Cursor="SizeNESW"
+							Style="{StaticResource Border_External_Style}" />
+                        <Border
+							x:Name="BORDER_RightTop"
+							Grid.Column="4"
+							Grid.Row="1"
+							Cursor="SizeNESW"
+							Style="{StaticResource Border_External_Style}" />
+
+
+                        <Border
+							x:Name="BORDER_Right"
+							Grid.Column="4"
+							Grid.Row="2"
+							Cursor="SizeWE"
+							Style="{StaticResource Border_External_Style}" />
+                        <Border
+							x:Name="BORDER_Bottom"
+							Grid.Column="2"
+							Grid.Row="4"
+							Cursor="SizeNS"
+							Style="{StaticResource Border_External_Style}" />
+
+                        <Border
+							x:Name="BORDER_RightBottom"
+							Grid.Column="4"
+							Grid.Row="3"
+							Cursor="SizeNWSE"
+							Style="{StaticResource Border_External_Style}" />
+                        <Border
+							x:Name="BORDER_BottomRight"
+							Grid.Column="3"
+							Grid.ColumnSpan="2"
+							Grid.Row="4"
+							Cursor="SizeNWSE"
+							Style="{StaticResource Border_External_Style}" />
+
+                        <Border
+							x:Name="BORDER_BottomLeft"
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							Grid.Row="4"
+							Cursor="SizeNESW"
+							Style="{StaticResource Border_External_Style}" />
+                        <Border
+							x:Name="BORDER_LeftBottom"
+							Grid.Column="0"
+							Grid.Row="3"
+							Cursor="SizeNESW"
+							Style="{StaticResource Border_External_Style}" />
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger
+							Binding="{Binding HasMaximize, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+							Value="False">
+                            <Setter
+								TargetName="PART_MaximizeButton"
+								Property="Visibility"
+								Value="Collapsed" />
+                        </DataTrigger>
+                        <DataTrigger
+							Binding="{Binding HasMinimize, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+							Value="False">
+                            <Setter
+								TargetName="PART_MinimizeButton"
+								Property="Visibility"
+								Value="Collapsed" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- / WINDOW -->
+
+</ResourceDictionary>

@@ -1,0 +1,377 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="02F90CD6-06DC-4355-B784-8B5B28C0A695/d:Drawing/f:TextureLoader.cs" caret="1367" fromTop="20" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/f:Pig.cs" caret="1961" fromTop="12" />
+      <File id="02F90CD6-06DC-4355-B784-8B5B28C0A695/d:Drawing/f:Sprite.cs" caret="554" fromTop="18" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/f:Block.cs" caret="1792" fromTop="14" />
+      <File id="02F90CD6-06DC-4355-B784-8B5B28C0A695/d:Drawing/f:AnimatedSprite.cs" caret="1087" fromTop="20" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:App.xaml" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:MainWindow.xaml" caret="13542" fromTop="7" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:StyleMapEditor.xaml" caret="17397" fromTop="7" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewMap.cs" caret="5747" fromTop="20" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Start.cs" caret="3203" fromTop="17" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Score.cs" caret="1580" fromTop="17" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Instraction.cs" caret="0" fromTop="0" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/f:Text.cs" caret="0" fromTop="0" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/f:Bird.cs" caret="0" fromTop="0" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/d:Factories/f:ObjectFactory.cs" caret="4800" fromTop="45" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/f:SomeGame.cs" caret="9274" fromTop="33" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Functions/f:Function.cs" caret="3565" fromTop="59" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Commands/f:Commands.cs" caret="2910" fromTop="96" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Helper/f:LoadTexture.cs" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Helper/f:EditorHelper.cs" caret="3464" fromTop="78" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:UILogic/f:TypeToBitmapConverter.cs" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:UILogic/f:NegativeDoubleConverter.cs" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/f:NotifyPropertyChanged.cs" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/f:Element.cs" caret="23" fromTop="1" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewObjectSetting.cs" caret="5875" fromTop="32" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBirdSetting.cs" caret="155" fromTop="6" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewPigSetting.cs" caret="151" fromTop="6" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBlockSetting.cs" caret="878" fromTop="26" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewSetting.cs" caret="915" fromTop="7" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:MainWindow.xaml.cs" caret="213" fromTop="10" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:StyleMapEditor.xaml" caret="17397" fromTop="15" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Functions/f:Function.cs" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Functions/f:Function.cs" caret="185" fromTop="6" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Functions/f:Function.cs" caret="3565" fromTop="16" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Functions/f:Function.cs" caret="3565" fromTop="17" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBlockSetting.cs" caret="187" fromTop="7" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewSetting.cs" caret="915" fromTop="5" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Helper/f:EditorHelper.cs" caret="3464" fromTop="28" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBlockSetting.cs" caret="555" fromTop="11" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBlockSetting.cs" caret="908" fromTop="19" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:StyleMapEditor.xaml" caret="17397" fromTop="8" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/f:StyleMapEditor.xaml" caret="17397" fromTop="2" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBirdSetting.cs" caret="0" fromTop="0" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewBirdSetting.cs" caret="155" fromTop="6" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewPigSetting.cs" caret="151" fromTop="6" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewObjectSetting.cs" caret="4904" fromTop="17" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewObjectSetting.cs" caret="5190" fromTop="28" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewObjectSetting.cs" caret="5548" fromTop="21" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/d:ViewModels/f:ViewObjectSetting.cs" caret="5875" fromTop="32" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/f:Element.cs" caret="113" fromTop="6" />
+      <File id="03837208-0C49-4715-8D00-A0BCC0599CC6/d:Models/f:Element.cs" caret="23" fromTop="1" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/f:SomeGame.cs" caret="711" fromTop="23" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/d:Factories/f:ObjectFactory.cs" caret="622" fromTop="15" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/d:Factories/f:ObjectFactory.cs" caret="4416" fromTop="17" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Model/d:Factories/f:ObjectFactory.cs" caret="4800" fromTop="25" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Score.cs" caret="516" fromTop="17" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Score.cs" caret="1249" fromTop="3" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Score.cs" caret="1580" fromTop="17" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Start.cs" caret="695" fromTop="17" />
+      <File id="576F1CA7-3401-459F-851B-1BD9B2109C2D/d:Screens/f:Start.cs" caret="3203" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="#region" priority="127" />
+      <Item value="#endregion" priority="126" />
+      <Item value="public" priority="479" />
+      <Item value="BirdSetting`0" priority="31" />
+      <Item value="BirdSetting" priority="93" />
+      <Item value="BlockSetting`0" priority="31" />
+      <Item value="BlockSetting" priority="126" />
+      <Item value="PigSetting`0" priority="64" />
+      <Item value="PigSetting" priority="94" />
+      <Item value="var" priority="447" />
+      <Item value="b" priority="127" />
+      <Item value="ViewSettings`0" priority="193" />
+      <Item value="Settings`0" priority="127" />
+      <Item value="settings" priority="225" />
+      <Item value="private" priority="255" />
+      <Item value="_settings" priority="352" />
+      <Item value="int" priority="159" />
+      <Item value="if" priority="255" />
+      <Item value="_objSetting" priority="127" />
+      <Item value="Vector2" priority="115" />
+      <Item value="string" priority="31" />
+      <Item value="Rotation" priority="31" />
+      <Item value="switch" priority="63" />
+      <Item value="case" priority="159" />
+      <Item value="break" priority="159" />
+      <Item value="readonly" priority="95" />
+      <Item value="Dictionary" priority="31" />
+      <Item value="bitmapSources" priority="32" />
+      <Item value="new" priority="448" />
+      <Item value="Dictionary&lt;object,BitmapSource&gt;" priority="28" />
+      <Item value="object" priority="125" />
+      <Item value="_bitmapSources" priority="97" />
+      <Item value="value" priority="799" />
+      <Item value="viewSettings" priority="32" />
+      <Item value="ObjectSetting`0" priority="95" />
+      <Item value="Settings" priority="91" />
+      <Item value="o" priority="161" />
+      <Item value="Setting" priority="96" />
+      <Item value="_classSettings" priority="64" />
+      <Item value="e" priority="31" />
+      <Item value="Setting`0" priority="31" />
+      <Item value="setting" priority="96" />
+      <Item value="_timeObject" priority="97" />
+      <Item value="Preview" priority="32" />
+      <Item value="Type" priority="31" />
+      <Item value="Position" priority="32" />
+      <Item value="Vector`0" priority="32" />
+      <Item value="MaterialType`0" priority="32" />
+      <Item value="Image`0" priority="128" />
+      <Item value="_image" priority="160" />
+      <Item value="Canvas`0" priority="31" />
+      <Item value="XPos" priority="31" />
+      <Item value="img" priority="63" />
+      <Item value="viewSetting" priority="31" />
+      <Item value="return" priority="286" />
+      <Item value="_current" priority="127" />
+      <Item value="ViewSettings" priority="32" />
+      <Item value="v" priority="63" />
+      <Item value="Value" priority="65" />
+      <Item value="_element" priority="256" />
+      <Item value="element" priority="32" />
+      <Item value="FrameworkElement`0" priority="31" />
+      <Item value="null" priority="31" />
+      <Item value="float" priority="31" />
+      <Item value="_objectSetting" priority="256" />
+      <Item value="ValidationError`0" priority="63" />
+      <Item value="Width" priority="63" />
+      <Item value="ComboBox" priority="29" />
+      <Item value="baseNames" priority="31" />
+      <Item value="SelectedIndex" priority="32" />
+      <Item value="p" priority="31" />
+      <Item value="true" priority="31" />
+      <Item value="false" priority="31" />
+      <Item value="Name" priority="32" />
+      <Item value="baseType" priority="32" />
+      <Item value="ComboBox`0" priority="63" />
+      <Item value="ref" priority="31" />
+      <Item value="box" priority="31" />
+      <Item value="out" priority="31" />
+      <Item value="x" priority="31" />
+      <Item value="AnimatedSprite`0" priority="31" />
+      <Item value="_blockSprite" priority="95" />
+      <Item value="AnimatedSprite" priority="29" />
+      <Item value="s" priority="95" />
+      <Item value="Vector2`0" priority="159" />
+      <Item value="Block" priority="28" />
+      <Item value="r" priority="159" />
+      <Item value="_screen" priority="31" />
+      <Item value="Rectangle`0" priority="95" />
+      <Item value="frameCount" priority="127" />
+      <Item value="scaleRect" priority="255" />
+      <Item value="FrameHeight" priority="159" />
+      <Item value="protected" priority="63" />
+      <Item value="_scaleRect" priority="127" />
+      <Item value="Point" priority="83" />
+      <Item value="Rectangle" priority="116" />
+      <Item value="data" priority="159" />
+      <Item value="FrameCount" priority="32" />
+      <Item value="ScaleRect" priority="32" />
+      <Item value="default" priority="31" />
+      <Item value="collection" priority="31" />
+      <Item value="_birds" priority="31" />
+      <Item value="RankException`0" priority="31" />
+      <Item value="rect" priority="159" />
+      <Item value="textureExp" priority="63" />
+      <Item value="rectangle" priority="32" />
+      <Item value="using" priority="30" />
+      <Item value="as" priority="31" />
+      <Item value="this" priority="159" />
+      <Item value="Stretch" priority="32" />
+      <Item value="Stretch`0" priority="32" />
+      <Item value="f" priority="31" />
+      <Item value="CurrentFrame" priority="31" />
+      <Item value="FrameWidth" priority="63" />
+      <Item value="Origin" priority="31" />
+      <Item value="_rect" priority="31" />
+      <Item value="AppDomain`0" priority="31" />
+      <Item value="BaseFolder" priority="31" />
+      <Item value="_height" priority="31" />
+      <Item value="_gravity" priority="63" />
+      <Item value="_blockSetting" priority="127" />
+      <Item value="RiseProperty`0" priority="63" />
+      <Item value="ViewMap`0" priority="63" />
+      <Item value="_Map" priority="32" />
+      <Item value="CurrentMap" priority="31" />
+      <Item value="map" priority="31" />
+      <Item value="ObjectSetting" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.ViewObject">
+      <Item value="BirdSetting" priority="135" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.Setting.BirdSetting">
+      <Item value="Equals`0" priority="26" />
+      <Item value="ZIndex" priority="108" />
+      <Item value="Position" priority="26" />
+      <Item value="Type" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.ViewSettings">
+      <Item value="_settings" priority="26" />
+      <Item value="_objSetting" priority="26" />
+      <Item value="Image" priority="80" />
+      <Item value="XPos" priority="26" />
+      <Item value="YPos" priority="26" />
+      <Item value="Settings" priority="161" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.Settings">
+      <Item value="BirdSetting" priority="161" />
+      <Item value="BlockSetting" priority="134" />
+      <Item value="PigSetting" priority="134" />
+      <Item value="Preview" priority="135" />
+      <Item value="Setting" priority="134" />
+      <Item value="Value" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Vector2">
+      <Item value="X" priority="189" />
+      <Item value="Y" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.Setting.Setting">
+      <Item value="Equals`0" priority="26" />
+      <Item value="Position" priority="53" />
+      <Item value="Rotation" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Single">
+      <Item value="Equals`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Image">
+      <Item value="Tag" priority="107" />
+      <Item value="Width" priority="26" />
+      <Item value="Source" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ScrollViewer">
+      <Item value="DataContext" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Vector2">
+      <Item value="Zero" priority="162" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Controls.Canvas">
+      <Item value="SetLeft`0" priority="26" />
+      <Item value="SetTop`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.Element">
+      <Item value="ViewSettings" priority="134" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.Setting.ObjectSetting">
+      <Item value="Width" priority="107" />
+      <Item value="Health" priority="107" />
+      <Item value="Heigth" priority="53" />
+      <Item value="Height" priority="80" />
+      <Item value="Mass" priority="80" />
+      <Item value="Friction" priority="80" />
+      <Item value="ScaleRect" priority="107" />
+      <Item value="FrameCount" priority="107" />
+      <Item value="Restitution" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.FrameworkElement">
+      <Item value="Width" priority="26" />
+      <Item value="Height" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ComboBox">
+      <Item value="ItemsSource" priority="26" />
+      <Item value="SelectedValue" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.StackPanel">
+      <Item value="Children" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.UIElementCollection">
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Enum">
+      <Item value="GetValues`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Name" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@LevelEditor.Models.ViewSettings">
+      <Item value="Birds" priority="27" />
+      <Item value="Pigs" priority="28" />
+      <Item value="Blocks" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ObservableCollection`1">
+      <Item value="Select`2" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.Setting.BlockSetting">
+      <Item value="Material" priority="242" />
+      <Item value="Position" priority="26" />
+      <Item value="Type" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.Material">
+      <Item value="ToString`0" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FarseerPhysics.Factories.FixtureFactory">
+      <Item value="AttachRectangle`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Rectangle">
+      <Item value="Width" priority="297" />
+      <Item value="Height" priority="323" />
+      <Item value="Offset`0" priority="26" />
+      <Item value="Location" priority="161" />
+      <Item value="Left" priority="80" />
+      <Item value="Top" priority="161" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Expander">
+      <Item value="ActualHeight" priority="26" />
+      <Item value="Visibility" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.Imaging.BitmapSource">
+      <Item value="Crop`0" priority="54" />
+      <Item value="PixelWidth" priority="80" />
+      <Item value="Width" priority="26" />
+      <Item value="PixelHeight" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Stretch">
+      <Item value="Fill" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.IObjectFactory">
+      <Item value="Setting" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.GameModel.Maps.Map">
+      <Item value="Settings" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JoyOS.System.Drawing.AnimatedSprite">
+      <Item value="Origin" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.AppDomain">
+      <Item value="CurrentDomain" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.AppDomain">
+      <Item value="BaseDirectory" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetFullPath`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.ViewBlockSetting">
+      <Item value="ObjectSetting" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.ViewObjectSetting">
+      <Item value="Preview" priority="26" />
+      <Item value="Equals`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LevelEditor.Models.ViewMap">
+      <Item value="ViewObjectSettings" priority="53" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

@@ -1,0 +1,239 @@
+﻿<local:WindowBase 
+        x:Class="LevelEditor.MainWindow" 
+        xmlns:local="clr-namespace:LevelEditor"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        x:Name="window" 
+        Title="{Binding ElementName=window, Path=Current.Map.Path}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        MinWidth="300" MinHeight="200"
+        Height="570" Width="985"
+        ResizeMode="CanResize"
+        TextOptions.TextFormattingMode="Display" 
+        HorizontalContentAlignment="Left"> <Window.CommandBindings>
+    <CommandBinding Command="Delete" CanExecute="DeleteCanExecute" Executed="DeleteExecuted" />
+    <CommandBinding Command="Save" CanExecute="SaveCanExecute" Executed="SaveExecuted" />
+    <CommandBinding Command="SaveAs" CanExecute="SaveAsCanExecute" Executed="SaveAsExecuted" />
+    <CommandBinding Command="Open" Executed="OpenExecute" />
+    <CommandBinding Command="Paste" CanExecute="PasteCanExecute" Executed="PasteExecuted" />
+  </Window.CommandBindings>
+  <DockPanel DataContext="{Binding ElementName=window,Path=Current}">
+    <Menu Style="{StaticResource Item_Style}" DockPanel.Dock="Top">
+      <MenuItem Header="Map" Style="{StaticResource MenuItem_Style}">
+        <MenuItem Header="Open" Command="Open"></MenuItem>
+        <MenuItem Header="Save" Command="Save"></MenuItem>
+        <MenuItem Header="Save as..." Command="SaveAs"></MenuItem>
+      </MenuItem>
+      <MenuItem Style="{StaticResource MenuItem_Style}" Header="Object">
+        <MenuItem Header="Delete" Command="Delete"></MenuItem>
+        <MenuItem Header="Paste" Command="Paste"></MenuItem>
+      </MenuItem>
+    </Menu>
+    <StatusBar Style="{StaticResource Item_Style}" DockPanel.Dock="Bottom">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="150" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+
+          <Slider Name="zoomSlider" Width="100" Minimum="0.1" Maximum="5" Value="1" />
+          <TextBlock Text="{Binding Value, ElementName=zoomSlider, StringFormat={}{0:\\00.00}% }"></TextBlock>
+        </StackPanel>
+        <TextBlock Name="status" Grid.Column="1" Text="{Binding Path=AddObject, StringFormat=Object:{0}}"></TextBlock>
+        <TextBlock Grid.Column="2" Text="{Binding Path=Map.Birds.Count, StringFormat=birds:{0}}"></TextBlock>
+        <TextBlock Grid.Column="3" Text="{Binding Path=Map.Pigs.Count, StringFormat=pigs:{0}}"></TextBlock>
+        <TextBlock Grid.Column="4" Text="{Binding Path=Map.Blocks.Count, StringFormat=blocks:{0}}"></TextBlock>
+        <TextBlock Grid.Column="5" Text="{Binding Path=Map.Items.Count, StringFormat=totlal:{0}}"></TextBlock>
+      </Grid>
+    </StatusBar>
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <TabControl Name="tabControl" TabStripPlacement="Left" FontStretch="UltraExpanded"
+                  SnapsToDevicePixels="True">
+        <TabItem Header="Toolbox">
+          <ScrollViewer>
+            <StackPanel Name="toolPanel">
+              <Expander Header="Birds type" Name="_birdsTypes" Style="{StaticResource EnumTypes}" />
+              <Expander Header="Pigs type" Name="_pigsTypes" Style="{StaticResource EnumTypes}" />
+              <ComboBox Name="material"></ComboBox>
+              <Expander Header="Blocks type" Name="_blocksTypes"
+                        Tag="{Binding ElementName=material, Path=SelectedValue}" Style="{StaticResource EnumTypes}" />
+            </StackPanel>
+          </ScrollViewer>
+        </TabItem>
+        <TabItem DataContext="{Binding Path=ViewSetting}" Header="Properties">
+          <ScrollViewer>
+            <StackPanel>
+              <TextBlock Text="{Binding Path=Name, Mode=OneWay}" FontFamily="Comic Sans MS" FontSize="10"></TextBlock>
+              <Expander Header="Private" Style="{StaticResource ExpanderBase}">
+                <ScrollViewer Style="{StaticResource PrivatePropScrollViewer}"></ScrollViewer>
+              </Expander>
+
+              <Expander Header="Texture" Style="{StaticResource ExpanderBase}">
+                <UniformGrid DataContext="{Binding Path=ObjectSetting}">
+                  <TextBlock Text="Left" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=ScaleLeft, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Top" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=ScaleTop, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Width" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=ScaleWidth, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Height" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=ScaleHeight, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Frames" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=FrameCount, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </UniformGrid>
+              </Expander>
+              <Expander Header="Common" Style="{StaticResource ExpanderBase}">
+                <UniformGrid DataContext="{Binding Path=ObjectSetting}">
+                  <TextBlock Text="Health" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=Health, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Shape" VerticalAlignment="Center" />
+                  <ComboBox Name="objectShape"
+                            SelectedValue="{Binding Path=Shape, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Width" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=Width, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Heigth" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=Height, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Mass" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=Mass, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Friction" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=Friction, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                  <TextBlock Text="Restitution" VerticalAlignment="Center" />
+                  <TextBox MaxLength="3"
+                           Text="{Binding Path=Restitution, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </UniformGrid>
+              </Expander>
+            </StackPanel>
+          </ScrollViewer>
+        </TabItem>
+        <TabItem DataContext="{Binding Path=Map}" Header="Map setting">
+          <StackPanel>
+            <TextBlock Text="{Binding Path=Name, Mode=OneWay}" FontFamily="Comic Sans MS" FontSize="10"></TextBlock>
+            <UniformGrid Columns="3">
+              <TextBlock Text="Size:" VerticalAlignment="Center" HorizontalAlignment="Stretch"></TextBlock>
+              <TextBox Text="{Binding Path=Width, Mode=TwoWay, ValidatesOnDataErrors=True}" Width="50"
+                       MaxLength="4"></TextBox>
+              <TextBox Text="{Binding Path=Height, Mode=TwoWay, ValidatesOnDataErrors=True}" Width="50"
+                       MaxLength="4"></TextBox>
+              <TextBlock Text="Gravity vector:" VerticalAlignment="Center" HorizontalAlignment="Stretch"></TextBlock>
+              <TextBox Text="{Binding Path=GravityXPos, Mode=TwoWay, ValidatesOnDataErrors=True}"
+                       Width="50" MaxLength="2"></TextBox>
+              <TextBox Text="{Binding Path=GravityYPos, Mode=TwoWay, ValidatesOnDataErrors=True}"
+                       Width="50" MaxLength="2"></TextBox>
+            </UniformGrid>
+          </StackPanel>
+        </TabItem>
+        <TabItem Header="Items">
+          <ScrollViewer>
+            <ListBox Name="itemsListBox" ItemsSource="{Binding Path=Map.Items}"
+                     SelectedValue="{Binding Path=ViewSetting, Mode=TwoWay}">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <StackPanel />
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                  <StackPanel Orientation="Horizontal">
+                    <Image HorizontalAlignment="Center" Width="15"
+                           Source="{Binding Path=ObjectSetting.Preview}" />
+                    <TextBlock Text="{Binding Path=Name, Mode=OneWay}"></TextBlock>
+                  </StackPanel>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ListBox>
+          </ScrollViewer>
+        </TabItem>
+      </TabControl>
+      <GridSplitter Grid.Column="1" Style="{StaticResource GridSplitter_Vertical}" HorizontalAlignment="Stretch" />
+      <TabControl Name="mapsTab" Grid.Column="2" SelectedValue="{Binding Path=Map}">
+        <TabControl.ItemTemplate>
+          <DataTemplate>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="15" />
+              </Grid.ColumnDefinitions>
+              <TextBlock Text="{Binding Path=Name}">
+              </TextBlock>
+              <Button Grid.Column="1" Tag="{Binding}" Click="DeleteMapClick"
+                      Style="{StaticResource MapClose}" />
+            </Grid>
+          </DataTemplate>
+        </TabControl.ItemTemplate>
+        <TabControl.ContentTemplate>
+          <DataTemplate>
+            <ScrollViewer PreviewMouseLeftButtonUp="MapItemMouseUp"
+                          PreviewMouseLeftButtonDown="MapPreviewMouseLeftButtonDown" Background="{StaticResource TabItem_Border_Brush}">
+              <ListBox HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Width="{Binding Path=Width}" Height="{Binding Path=Height}" ItemsSource="{Binding Path=Items}"
+                       PreviewMouseLeftButtonDown="MapPreviewMouseDown" PreviewMouseMove="MapMouseMove"
+                       PreviewMouseWheel="MapItemPreviewMouseWheel"
+                       SelectedValue="{Binding ElementName=itemsListBox, Path=SelectedValue,Mode=TwoWay}">
+                <ListBox.LayoutTransform>
+                  <ScaleTransform ScaleX="{Binding Path=Value, ElementName=zoomSlider}"
+                                  ScaleY="{Binding Path=Value, ElementName=zoomSlider}" />
+                </ListBox.LayoutTransform>
+                <ItemsControl.ItemsPanel>
+                  <ItemsPanelTemplate>
+                    <Canvas />
+                  </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                  <Style TargetType="ListBoxItem">
+                    <Setter Property="Canvas.Left" Value="{Binding Path=CenterX, Mode=TwoWay}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Path=CenterY, Mode=TwoWay}" />
+                    <Setter Property="RenderTransform">
+                      <Setter.Value>
+                        <TransformGroup>
+                          <RotateTransform Angle="{Binding Path=Rotation}"
+                                           CenterX="{Binding Path=OffsetX}" CenterY="{Binding Path=OffsetY}" />
+                          <TranslateTransform
+X="{Binding Path=OffsetX,Converter={StaticResource ResourceKey=negativeDoubleConvert}}"
+Y="{Binding Path=OffsetY,Converter={StaticResource ResourceKey=negativeDoubleConvert}}" />
+                        </TransformGroup>
+                      </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                      <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Canvas.ZIndex" Value="99999" />
+                      </Trigger>
+                    </Style.Triggers>
+                  </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <Image Stretch="Fill" Width="{Binding Path=ObjectSetting.Width}"
+                           Height="{Binding Path=ObjectSetting.Height}" DataContext="{Binding}" PreviewMouseLeftButtonDown="MapItemMouseDown"
+                           Source="{Binding Path=ObjectSetting.Preview}">
+                    </Image>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ListBox>
+            </ScrollViewer>
+          </DataTemplate>
+        </TabControl.ContentTemplate>
+      </TabControl>
+    </Grid>
+  </DockPanel>
+</local:WindowBase>

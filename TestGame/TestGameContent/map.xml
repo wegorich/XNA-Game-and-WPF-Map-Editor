@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Maps="JoyOS.GameModel.Maps" xmlns:GameModel="JoyOS.GameModel">
+  <Asset Type="Maps:Map">
+    <MapWidth>800</MapWidth>
+    <MapHeigth>480</MapHeigth>
+    <Gravity>0 10</Gravity>
+    <Birds>
+      <Item>
+        <Position>770.8252 157.037842</Position>
+        <Rotation>0</Rotation>
+        <Type>Yellow</Type>
+        <ZIndex>0</ZIndex>
+      </Item>
+      <Item>
+        <Position>95 81</Position>
+        <Rotation>0</Rotation>
+        <Type>Black</Type>
+        <ZIndex>0</ZIndex>
+      </Item>
+      <Item>
+        <Position>278 115</Position>
+        <Rotation>0</Rotation>
+        <Type>Red</Type>
+        <ZIndex>0</ZIndex>
+      </Item>
+      <Item>
+        <Position>522.5 100</Position>
+        <Rotation>-0.418879032</Rotation>
+        <Type>BigBrother</Type>
+        <ZIndex>0</ZIndex>
+      </Item>
+    </Birds>
+    <Pigs>
+      <Item>
+        <Position>124.62146 406.056427</Position>
+        <Rotation>0</Rotation>
+        <Type>King</Type>
+      </Item>
+      <Item>
+        <Position>147.369232 197.140381</Position>
+        <Rotation>6.657903E-08</Rotation>
+        <Type>Medium</Type>
+      </Item>
+      <Item>
+        <Position>286.274353 428.86026</Position>
+        <Rotation>-6.28318548</Rotation>
+        <Type>Medium</Type>
+      </Item>
+      <Item>
+        <Position>309 349</Position>
+        <Rotation>0</Rotation>
+        <Type>King</Type>
+      </Item>
+    </Pigs>
+    <Blocks>
+      <Item>
+        <Position>229.930847 469.947418</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Wood</Material>
+      </Item>
+      <Item>
+        <Position>226.467224 353.372223</Position>
+        <Rotation>1.57079637</Rotation>
+        <Type>LongRect</Type>
+        <Material>Glass</Material>
+      </Item>
+      <Item>
+        <Position>329.223877 242.389526</Position>
+        <Rotation>0</Rotation>
+        <Type>LongRect</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>405.372223 354.372223</Position>
+        <Rotation>1.57079637</Rotation>
+        <Type>LongRect</Type>
+        <Material>Glass</Material>
+      </Item>
+      <Item>
+        <Position>57.3722229 353.372223</Position>
+        <Rotation>1.57079637</Rotation>
+        <Type>LongRect</Type>
+        <Material>Glass</Material>
+      </Item>
+      <Item>
+        <Position>124.389526 241.389526</Position>
+        <Rotation>0</Rotation>
+        <Type>LongRect</Type>
+        <Material>Glass</Material>
+      </Item>
+      <Item>
+        <Position>297.5 189.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigTriangle</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>215.5 130.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigTriangle</Type>
+        <Material>Wood</Material>
+      </Item>
+      <Item>
+        <Position>390.5 209.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigTriangle</Type>
+        <Material>Wood</Material>
+      </Item>
+      <Item>
+        <Position>769.5 406.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>769.5 358.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>768.5 310.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>768.5 260.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>768.5 210.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Stone</Material>
+      </Item>
+      <Item>
+        <Position>643.5 452.5</Position>
+        <Rotation>-1.67551625</Rotation>
+        <Type>BigTriangle</Type>
+        <Material>Glass</Material>
+      </Item>
+      <Item>
+        <Position>770.5 455.5</Position>
+        <Rotation>0</Rotation>
+        <Type>BigSquare</Type>
+        <Material>Glass</Material>
+      </Item>
+    </Blocks>
+    <Settings>
+      <Item>
+        <Key Type="GameModel:BirdType">Red</Key>
+        <Value>
+          <Width>60</Width>
+          <Height>60</Height>
+          <Mass>2</Mass>
+          <Friction>0.5</Friction>
+          <Restitution>0.5</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 159 154</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:BirdType">Yellow</Key>
+        <Value>
+          <Width>60</Width>
+          <Height>60</Height>
+          <Mass>1</Mass>
+          <Friction>0</Friction>
+          <Restitution>0.5</Restitution>
+          <Health>400</Health>
+          <ScaleRect>0 0 64 60</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:BirdType">Black</Key>
+        <Value>
+          <Width>80</Width>
+          <Height>80</Height>
+          <Mass>5</Mass>
+          <Friction>0.3</Friction>
+          <Restitution>0.5</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 70 92</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:BirdType">BigBrother</Key>
+        <Value>
+          <Width>100</Width>
+          <Height>100</Height>
+          <Mass>10</Mass>
+          <Friction>0.5</Friction>
+          <Restitution>0.5</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 99 107</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:BirdType">BigBrotherGreen</Key>
+        <Value>
+          <Width>100</Width>
+          <Height>100</Height>
+          <Mass>10</Mass>
+          <Friction>0.5</Friction>
+          <Restitution>0.5</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 127 121</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:BirdType">Orange</Key>
+        <Value>
+          <Width>40</Width>
+          <Height>40</Height>
+          <Mass>0.2</Mass>
+          <Friction>0.3</Friction>
+          <Restitution>0.3</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 69 76</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:BirdType">MightyEagle</Key>
+        <Value>
+          <Width>100</Width>
+          <Height>100</Height>
+          <Mass>7</Mass>
+          <Friction>0.2</Friction>
+          <Restitution>0.2</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 100 200</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:PigType">Baby</Key>
+        <Value>
+          <Width>30</Width>
+          <Height>30</Height>
+          <Mass>0.2</Mass>
+          <Friction>0.2</Friction>
+          <Restitution>0.2</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 0 0</ScaleRect>
+          <FrameCount>0</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:PigType">Helmet</Key>
+        <Value>
+          <Width>50</Width>
+          <Height>50</Height>
+          <Mass>2</Mass>
+          <Friction>0.5</Friction>
+          <Restitution>1</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 92 92</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:PigType">King</Key>
+        <Value>
+          <Width>100</Width>
+          <Height>100</Height>
+          <Mass>1</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.1</Restitution>
+          <Health>200</Health>
+          <ScaleRect>0 0 223 238</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:PigType">Large</Key>
+        <Value>
+          <Width>60</Width>
+          <Height>60</Height>
+          <Mass>1</Mass>
+          <Friction>0.5</Friction>
+          <Restitution>0.5</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 99 99</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:PigType">Medium</Key>
+        <Value>
+          <Width>60</Width>
+          <Height>60</Height>
+          <Mass>0.5</Mass>
+          <Friction>0.3</Friction>
+          <Restitution>0.3</Restitution>
+          <Health>80</Health>
+          <ScaleRect>0 0 99 99</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="GameModel:PigType">Moustache</Key>
+        <Value>
+          <Width>80</Width>
+          <Height>80</Height>
+          <Mass>1.5</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.2</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 112 112</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">GlassBigCicle</Key>
+        <Value>
+          <Width>30</Width>
+          <Height>30</Height>
+          <Mass>0.5</Mass>
+          <Friction>0.1</Friction>
+          <Restitution>0.1</Restitution>
+          <Health>50</Health>
+          <ScaleRect>0 0 81 75</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">GlassBigSquare</Key>
+        <Value>
+          <Width>50</Width>
+          <Height>50</Height>
+          <Mass>2.5</Mass>
+          <Friction>0.1</Friction>
+          <Restitution>0.1</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 86 84</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">GlassBigTriangle</Key>
+        <Value>
+          <Width>80</Width>
+          <Height>200</Height>
+          <Mass>4</Mass>
+          <Friction>0.1</Friction>
+          <Restitution>0.1</Restitution>
+          <Health>40</Health>
+          <ScaleRect>0 0 86 85</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>TriangleIsosceles</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">GlassLongRect</Key>
+        <Value>
+          <Width>205</Width>
+          <Height>25</Height>
+          <Mass>5</Mass>
+          <Friction>0.1</Friction>
+          <Restitution>0.1</Restitution>
+          <Health>150</Health>
+          <ScaleRect>0 0 205 25</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">GlassMiddleRect</Key>
+        <Value>
+          <Width>170</Width>
+          <Height>23</Height>
+          <Mass>3</Mass>
+          <Friction>0.1</Friction>
+          <Restitution>0.1</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 170 23</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">StoneBigCicle</Key>
+        <Value>
+          <Width>30</Width>
+          <Height>30</Height>
+          <Mass>1</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.4</Restitution>
+          <Health>200</Health>
+          <ScaleRect>0 5 81 75</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">StoneBigSquare</Key>
+        <Value>
+          <Width>50</Width>
+          <Height>50</Height>
+          <Mass>5</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.4</Restitution>
+          <Health>100</Health>
+          <ScaleRect>0 0 86 84</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">StoneBigTriangle</Key>
+        <Value>
+          <Width>80</Width>
+          <Height>80</Height>
+          <Mass>8</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.4</Restitution>
+          <Health>300</Health>
+          <ScaleRect>0 0 86 85</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>TriangleIsosceles</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">StoneLongRect</Key>
+        <Value>
+          <Width>205</Width>
+          <Height>25</Height>
+          <Mass>10</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.4</Restitution>
+          <Health>300</Health>
+          <ScaleRect>0 2 205 22</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">StoneMiddleRect</Key>
+        <Value>
+          <Width>170</Width>
+          <Height>23</Height>
+          <Mass>6</Mass>
+          <Friction>1</Friction>
+          <Restitution>0.4</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 170 23</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">WoodBigCicle</Key>
+        <Value>
+          <Width>30</Width>
+          <Height>30</Height>
+          <Mass>0.1</Mass>
+          <Friction>0.4</Friction>
+          <Restitution>1</Restitution>
+          <Health>125</Health>
+          <ScaleRect>0 0 81 77</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Circle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">WoodBigSquare</Key>
+        <Value>
+          <Width>400</Width>
+          <Height>25</Height>
+          <Mass>1.5</Mass>
+          <Friction>0.4</Friction>
+          <Restitution>1</Restitution>
+          <Health>300</Health>
+          <ScaleRect>0 0 86 84</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">WoodBigTriangle</Key>
+        <Value>
+          <Width>100</Width>
+          <Height>40</Height>
+          <Mass>1.5</Mass>
+          <Friction>0.4</Friction>
+          <Restitution>1</Restitution>
+          <Health>200</Health>
+          <ScaleRect>0 0 86 85</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>TriangleIsosceles</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">WoodLongRect</Key>
+        <Value>
+          <Width>205</Width>
+          <Height>22</Height>
+          <Mass>3</Mass>
+          <Friction>0.4</Friction>
+          <Restitution>1</Restitution>
+          <Health>250</Health>
+          <ScaleRect>0 0 205 22</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+      <Item>
+        <Key Type="string">WoodMiddleRect</Key>
+        <Value>
+          <Width>170</Width>
+          <Height>21</Height>
+          <Mass>2</Mass>
+          <Friction>0.4</Friction>
+          <Restitution>1</Restitution>
+          <Health>20</Health>
+          <ScaleRect>0 0 170 21</ScaleRect>
+          <FrameCount>1</FrameCount>
+          <Shape>Rectangle</Shape>
+        </Value>
+      </Item>
+    </Settings>
+  </Asset>
+</XnaContent>
